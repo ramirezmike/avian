@@ -12,6 +12,7 @@ use crate::prelude::RigidBody;
 ///
 /// [`ColliderTree`]: crate::collider_tree::ColliderTree
 #[derive(Component, Clone, Copy, Debug, PartialEq, Eq, Hash, Reflect)]
+#[component(clone_behavior = Ignore)]
 pub struct ColliderTreeProxyKey(u32);
 
 impl ColliderTreeProxyKey {
