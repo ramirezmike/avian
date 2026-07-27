@@ -236,6 +236,9 @@ impl<C: AnyCollider> NarrowPhase<'_, '_, C> {
                     contact_pair
                         .flags
                         .set(ContactPairFlags::STARTED_TOUCHING, false);
+                    contact_pair
+                        .flags
+                        .set(ContactPairFlags::STARTED_GENERATING_CONSTRAINTS, false);
 
                     if contact_pair.generates_constraints() {
                         // Add the contact pair to the constraint graph.
